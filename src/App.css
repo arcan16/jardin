@@ -1,0 +1,474 @@
+*{
+  box-sizing: border-box;
+  /* box-sizing: content-box; */
+  font-family:'Jomolhari',sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+}
+*,
+*::before,
+*::after{
+  margin: 0;
+  padding: 0;
+}
+
+html{
+  /* background-color: rgb(216, 247, 251); */
+}
+header{
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 15vh;
+  padding: .5rem;
+  background-color: rgb(0, 91,119);
+  color:white;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 -1rem 5px -10px white inset;
+  border-radius: 0 0 1rem 1rem;
+  z-index: 999;
+}
+
+.logo-container{
+  width: 30vw;
+  gap: 1rem;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  font-size: .85rem;
+  padding-left: 2rem;
+}
+.logo-principal{
+  width: 4rem;
+  height: fit-content;
+  border-radius: 1rem;
+}
+.logo-titulo{
+  font-size: 1rem;
+  margin-bottom:2rem;
+}
+
+.menu{
+  width: 80vw;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-left: auto;
+  text-decoration: none;
+}
+.menu >*{
+  text-decoration: none;
+  height: fit-content;
+  color: white;
+  font-size: 1.8rem;
+}
+.active-link{
+  padding-bottom: .05rem;
+  border-bottom: thin solid #ffffff;
+}
+
+.contenido-dividido{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 85vh;
+  background-color: blueviolet;
+}
+
+.slides{
+  width: 100%;
+  height: 85vh;
+  overflow-y: scroll;
+  scroll-snap-type: block mandatory;
+}
+.slide{
+  width: 100%;
+  height: 85vh;
+  scroll-snap-align: start;
+}
+
+.contenido-izquierdo
+{
+  background-color: rgb(216, 247, 251);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:center ;
+  padding: 0 2rem;
+  text-align: justify;
+}
+.contenido-izquierdo>h2{
+  font-size: 1.7rem;
+}
+.contenido-izquierdo>p{
+  margin-top: 2rem;
+  font-size: 1.2rem;
+}
+.contenido-derecho{ 
+  /* background-color: coral; */
+  width: 100%;
+  height: 100%;
+  background-image: url("/escuela/didactico.jpg");
+  background-position: center 65%;
+}
+/* .contenido-derecho>img{
+  height: 100%;
+} */
+
+.dato-resaltado{
+  width: 15vw;
+  height: 15vh;
+  margin-top: 3rem;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2rem;
+  box-shadow: 1px 2px 5px 1px rgba(0, 0, 0, 0.393);
+}
+.dato-resaltado>*{
+  font-size: 1.2rem;
+}
+
+.contenido-completo{
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contenido-completo .titulo{
+  text-align: center;
+  font-size: 2rem;
+}
+.cards-container{
+  /* background-color: aqua; */
+  width: 90vw;
+  height: 75vh;
+  display: grid;
+  grid-column-gap: 1rem;
+  /* grid-row-gap: 1rem; */
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.teacher-card{
+  display: grid;
+  grid-template-columns: 40% 1fr;
+  background-color: white;
+  border-radius: 5rem;
+  width:90%;
+  height: 17vh;
+  box-shadow: 3px 4px 5px 1px rgba(0, 0, 0, 0.393);
+  overflow: hidden;
+}
+
+.img-teacher{
+  width: 7.5rem;
+  border-radius: 50%;
+}
+.teacher-details{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+.card-title{
+  font-size: 1.2rem;
+}
+.card-puesto{
+  font-size: 1.2rem;
+}
+
+.teacher-plus{
+  text-align: justify;
+  border-left: thick solid rgb(255,122,0);
+  height: 80%;
+  padding-left: 1rem;
+}
+
+footer{
+  width: 100%;
+  height: fit-content;
+  background-color: rgb(0, 91,119);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 1rem;
+  color: white;
+}
+footer>div{
+  padding-left: 4rem;
+}
+a{
+  font-weight: bolder;
+  color: white;
+  text-decoration: none;
+}
+
+.social-icon{
+  margin: 5px;
+  width: 40px;
+  height: 40px;
+  filter: invert(1);
+}
+
+.slider-container{
+  width: 100%;
+  height: 85vh;  
+}
+
+.slider{
+  
+  background-image: url("/escuela/1.jpg");
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  animation: animate 15s infinite;
+  
+}
+
+@keyframes animate {
+  25%{
+    background-image: url("/escuela/4.jpg");
+    /* background-color: blueviolet; */
+    background-size: cover;
+  }
+  50%{
+    background-image: url("/escuela/3.jpg");
+    /* background-color: orange; */
+    background-size: cover;
+  }
+  75%{
+    background-image: url("/escuela/2.jpeg");
+    /* background-color: orangered; */
+    background-size: cover;
+  }
+  100%{
+    background-image: url("/escuela/1.jpg");
+    /* background-color: yellow; */
+    background-size: cover;
+  }
+}
+
+
+/* Comienza diseño para "Nosotros"*/
+
+.nosotros-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+}
+
+.contenido-nosotros{
+  padding: 1rem;
+  /* background-color: violet; */
+  height: fit-content;
+  display: flex;
+  padding-top: 7vh;
+  margin-bottom: 10vh;
+}
+.sub-nosotros{
+  text-align: center;
+  font-size: 1.5rem;
+}
+.contenido-nosotros>*{
+  margin-left: 2rem;
+  text-align: justify;
+}
+.left-box{
+  margin-top: 3rem;
+  border-left: 4px solid orange;
+  height: fit-content;
+}
+.parrafo-izquierdo{
+  padding-left: 1rem;
+  
+  
+  
+}
+.nosotros-descripcion{
+  padding:0 4rem;
+}
+
+.mision-vision-valores{
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.box-mvv{
+  width: 35vw;
+  height: fit-content;
+  background-color: white;
+  margin-left: 60px;
+  border-radius: 4rem;
+  box-shadow: 1px 2px 5px 1px rgba(0, 0, 0, 0.393); 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+.box-mvv{
+  text-align: justify;
+}
+.lista-valores{
+  display: flex;
+  gap: 5rem;
+}
+ul,li{
+  list-style-type:"-  ";
+}
+.mvv-title{
+  font-size: 1.5rem;
+}
+
+.mision-t{
+  color:rgb(102, 0, 119);
+}
+.vision-t{
+  color:rgb(255, 120, 0);
+}
+.valores-t{
+  color: rgb(1, 114, 139);
+}
+
+
+/* formulario de contacto contact-form */
+.contact-form{
+  --form-ok-color:#4caf50;
+  --form-error-color:#f44336;
+  background-color: rgb(235, 234, 234);
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 50%;
+  padding-bottom: 1rem;
+  border-radius: 2rem;
+}
+
+.contact-form>*{
+  padding: 0.5rem;
+  margin: 1rem auto;
+  display: block;
+  width: 70%;
+}
+
+.contact-form textarea{
+  resize: none;
+}
+.contact-form legend,
+.contact-form-response{
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+.contact-form input,
+.contact-form textarea{
+    font-size: 1rem;
+    font-family: sans-serif;
+    font-weight: initial;
+}
+.contact-form input[type="submit"]{
+  width: fit-content;
+  padding: 1rem 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: .5rem;
+  background-color: rgb(241, 72, 0);
+  color: white;
+  font-weight: bolder;
+  border: none;
+}
+.contact-form *::placeholder{
+  color: black;
+}
+
+.contact-form [required]:valid{
+  border: thin solid var(--form-ok-color);
+}
+.contact-form [required]:invalid{
+  border: thin solid var(--form-error-color);
+}
+
+.contact-form-error{
+  margin-top: -1rem;
+  font-size: 80%;
+  background-color: var(--form-error-color);
+  color: #fff;
+  transition: all 800ms ease;
+}
+
+.contact-form-error.is-active{
+  display: block;
+  animation: show-message 1s 1 normal 0s ease-out both;
+}
+
+.none{
+  display: none;
+}
+
+@keyframes show-message{
+  0%{
+      visibility: hidden;
+      opacity: 0;
+  }
+
+  100%{
+      visibility: visible;
+      opacity: 1;
+  }
+
+}
+
+.legend-formulario{
+  font-weight: initial;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.calendario-container{
+  padding-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: top;
+  margin-bottom: 2.3rem;
+  height: fit-content;
+}
+.calendario-escolar{
+  border: solid 1px #777;
+  width: 80vw;
+  height:50vh; 
+}
+
+/* Hero.jsx */
+.hero-container {
+  position: relative;
+  height: 30vh;
+  background-position: 0 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-div{
+  width: 100%;
+  height: 100%;
+  opacity: .6;
+}
+.hero-title{
+  position: absolute;
+  font-size: 4rem;
+  color: black;
+  opacity: 1;
+}
+
+/* header de contacto */
+.img-contacto{
+  /* background-image: url("/heros/contacto.jpeg"); */
+  background-size: cover;
+  background-position: 0 40%;
+}
