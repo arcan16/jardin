@@ -13,7 +13,7 @@ export function Calendario(){
             {/* <Hero titulo="Calendario" estilo={estilos}/>  */}
             <div className="hero-container">
                 <div className="hero-div img-hero img-calendario" ></div>
-                <h1 className="hero-title" >Inscripciones</h1>
+                <h1 className="hero-title" >Calendario</h1>
             </div>
             <CalendarioGoogle/>
             <Pie/>
