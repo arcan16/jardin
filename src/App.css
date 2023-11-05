@@ -467,8 +467,29 @@ ul,li{
 }
 
 /* header de contacto */
-.img-contacto{
-  /* background-image: url("/heros/contacto.jpeg"); */
+.img-hero{
   background-size: cover;
-  background-position: 0 40%;
+  
 }
+
+.img-nosotros{
+  background-image: url("/heros/nosotros.jpg");
+  background-position: 0 10%;
+}
+
+.img-inscripciones{
+  background-image: url("/heros/admision.jpg");
+  background-position: 0 50%;
+  background-size: auto 250%;
+}
+
+.img-calendario{
+  background-image: url("/heros/cal.jpg");
+  background-position: 0 70%;
+  background-size:"cover";
+}
+
+  .img-contacto{
+    background-image: url("/heros/contacto.jpeg");
+    background-position: 0 45%;
+  }

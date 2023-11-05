@@ -1,12 +1,16 @@
 import { Hero } from "./Hero";
 
 export function Formulario(){
-    let estilos={
-        backgroundImage:"url('/heros/contacto.jpeg')"
-    }
+    // let estilos={
+    //     backgroundImage:"url('/heros/contacto.jpeg')"
+    // }
     return(
         <>
-            <Hero titulo="Contacto" estilo={estilos}/>  
+            {/* <Hero titulo="Contacto" estilo={estilos}/>   */}
+            <div className="hero-container">
+                <div className="hero-div img-hero img-contacto" ></div>
+                <h1 className="hero-title" >Inscripciones</h1>
+            </div>
             <form action="https://formsubmit.co/sergio.p.ar.spa@gmail.com" method="POST" className="contact-form">
                 <legend>
                     Contactanos

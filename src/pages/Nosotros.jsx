@@ -2,13 +2,17 @@ import { Hero } from "../Components/Hero";
 import { Pie } from "../Components/Pie";
 
 export function Nosotros(){
-    let estilos={
-        backgroundImage:"url('/maestras/nosotros.jpg')",
-        backgroundPosition:"center 9%"
-    }
+    // let estilos={
+    //     backgroundImage:"url('/maestras/nosotros.jpg')",
+    //     backgroundPosition:"center 9%"
+    // }
     return(
         <section className="nosotros-main">
-            <Hero titulo="¿Que nos hace diferentes" estilo={estilos}/>
+            {/* <Hero titulo="¿Que nos hace diferentes" estilo={estilos}/> */}
+            <div className="hero-container">
+                <div className="hero-div img-hero img-nosotros" ></div>
+                <h1 className="hero-title" >¿Que nos hace diferentes?</h1>
+            </div>
             <div className="contenido-nosotros">
                 <div className="left-box">
                     <p className="parrafo-izquierdo">Nuestra tarea en cuanto a la creatividad es ayudar a que los niños suban sus propias montañas, lo mas alto posible</p>
