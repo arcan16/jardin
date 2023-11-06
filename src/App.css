@@ -12,10 +12,17 @@
   padding: 0;
 }
 
-html{
-  /* background-color: rgb(216, 247, 251); */
-}
-header{
+/* html{
+  position: relative;
+  background-color: rgb(216, 247, 251);
+} */
+/* .raiz{
+  position: relative;
+  height: fit-content;
+  height: 100vh;
+} */
+
+.header{
   position: sticky;
   top: 0;
   left: 0;
@@ -32,7 +39,7 @@ header{
 }
 
 .logo-container{
-  width: 30vw;
+  width: 80vw;
   gap: 1rem;
   display: flex;
   justify-content: start;
@@ -47,7 +54,8 @@ header{
 }
 .logo-titulo{
   font-size: 1rem;
-  margin-bottom:2rem;
+  color: white;
+  /* margin-bottom:2rem; */
 }
 
 .menu{
@@ -70,22 +78,23 @@ header{
 }
 
 .contenido-dividido{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  height: 85vh;
-  background-color: blueviolet;
+  display: flex;
+  flex-direction: column;
+  /* height: 85vh; */
 }
 
 .slides{
+position: relative;
+/* z-index: -2; */
   width: 100%;
-  height: 85vh;
-  overflow-y: scroll;
-  scroll-snap-type: block mandatory;
+  /* height: 85vh; */
+  /* overflow-y: scroll; */
+  /* scroll-snap-type: block mandatory; */
 }
 .slide{
   width: 100%;
-  height: 85vh;
-  scroll-snap-align: start;
+  /* height: 85vh; */
+  /* scroll-snap-align: start; */
 }
 
 .contenido-izquierdo
@@ -97,6 +106,7 @@ header{
   justify-content:center ;
   padding: 0 2rem;
   text-align: justify;
+  padding-top: 1rem;
 }
 .contenido-izquierdo>h2{
   font-size: 1.7rem;
@@ -106,20 +116,18 @@ header{
   font-size: 1.2rem;
 }
 .contenido-derecho{ 
-  /* background-color: coral; */
   width: 100%;
-  height: 100%;
+  height: 50vh;
   background-image: url("/escuela/didactico.jpg");
-  background-position: center 65%;
+  background-position: center 78%;
 }
-/* .contenido-derecho>img{
-  height: 100%;
-} */
 
 .dato-resaltado{
-  width: 15vw;
+  width: fit-content;
   height: 15vh;
+  padding: 0 1rem;
   margin-top: 3rem;
+  margin-bottom: 2rem;
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -127,12 +135,14 @@ header{
   align-items: center;
   border-radius: 2rem;
   box-shadow: 1px 2px 5px 1px rgba(0, 0, 0, 0.393);
+
 }
 .dato-resaltado>*{
   font-size: 1.2rem;
 }
 
 .contenido-completo{
+  /* margin-top: 2rem; */
   height: 85vh;
   display: flex;
   flex-direction: column;
@@ -141,25 +151,29 @@ header{
 .contenido-completo .titulo{
   text-align: center;
   font-size: 2rem;
+  margin: 1rem 0;
 }
 .cards-container{
   /* background-color: aqua; */
   width: 90vw;
-  height: 75vh;
-  display: grid;
-  grid-column-gap: 1rem;
-  /* grid-row-gap: 1rem; */
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+  /* grid-row-gap: 1rem;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr; */
 }
 
 .teacher-card{
   display: grid;
-  grid-template-columns: 40% 1fr;
+  grid-template-columns: 30% 1fr;
   background-color: white;
   border-radius: 5rem;
-  width:90%;
-  height: 17vh;
+  width:100%;
+  height: fit-content;
+  margin-bottom: 1rem;
   box-shadow: 3px 4px 5px 1px rgba(0, 0, 0, 0.393);
   overflow: hidden;
 }
@@ -172,7 +186,7 @@ header{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  text-align: left;
+  text-align: center;
 }
 
 .card-title{
@@ -185,16 +199,19 @@ header{
 .teacher-plus{
   text-align: justify;
   border-left: thick solid rgb(255,122,0);
-  height: 80%;
+  height: fit-content;
   padding-left: 1rem;
+  margin-bottom: 2rem;
 }
 
 footer{
   width: 100%;
   height: fit-content;
   background-color: rgb(0, 91,119);
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  /* display: grid; */
+  display: flex;
+  flex-direction: column;
+  /* grid-template-columns: 1fr 1fr 1fr; */
   padding: 1rem;
   color: white;
 }
@@ -264,10 +281,11 @@ a{
 }
 
 .contenido-nosotros{
-  padding: 1rem;
+  padding: 1rem 0;
   /* background-color: violet; */
   height: fit-content;
   display: flex;
+  flex-direction: column-reverse;
   padding-top: 7vh;
   margin-bottom: 10vh;
 }
@@ -276,7 +294,7 @@ a{
   font-size: 1.5rem;
 }
 .contenido-nosotros>*{
-  margin-left: 2rem;
+  /* margin-left: 2rem; */
   text-align: justify;
 }
 .left-box{
@@ -290,33 +308,38 @@ a{
   
   
 }
+.nosotros-main{
+  position: relative;
+  z-index: -2;
+}
 .nosotros-descripcion{
-  padding:0 4rem;
+  padding:0 1rem;
 }
 
 .mision-vision-valores{
   width: 100%;
-  height: 90vh;
+  /* height: 90vh; */
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  /* flex-wrap: wrap; */
   justify-content: center;
   align-items: center;
 }
 .box-mvv{
-  width: 35vw;
+  /* width: 35vw; */
   height: fit-content;
   background-color: white;
-  margin-left: 60px;
+  margin: 1rem 1rem;
+  /* margin-left: 60px; */
   border-radius: 4rem;
   box-shadow: 1px 2px 5px 1px rgba(0, 0, 0, 0.393); 
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 2rem;
-}
-.box-mvv{
   text-align: justify;
 }
+
 .lista-valores{
   display: flex;
   gap: 5rem;
@@ -346,9 +369,11 @@ ul,li{
   background-color: rgb(235, 234, 234);
   margin-left: auto;
   margin-right: auto;
-  max-width: 50%;
+  max-width: 100%;
   padding-bottom: 1rem;
   border-radius: 2rem;
+  position: relative;
+  /* z-index: ; */
 }
 
 .contact-form>*{
@@ -443,16 +468,18 @@ ul,li{
   border: solid 1px #777;
   width: 80vw;
   height:50vh; 
+  z-index: -2;
 }
 
 /* Hero.jsx */
 .hero-container {
   position: relative;
-  height: 30vh;
+  height: 20vh;
   background-position: 0 40%;
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: -2;
 }
 .hero-div{
   width: 100%;
@@ -461,15 +488,15 @@ ul,li{
 }
 .hero-title{
   position: absolute;
-  font-size: 4rem;
+  font-size: 2rem;
   color: black;
+  text-align: center;
   opacity: 1;
 }
 
 /* header de contacto */
 .img-hero{
   background-size: cover;
-  
 }
 
 .img-nosotros{
@@ -497,6 +524,8 @@ ul,li{
   /* Comienza diseño de Inscripciones */
 
 .inscripciones-container{
+  position: relative;
+  z-index: -2;
   width: 100%;
   height: fit-content;
   /* background-color: violet; */
@@ -524,12 +553,13 @@ ul,li{
 
 .proceso-container{
   margin: 1rem 0;
-  margin-right: 3rem;
+  /* margin-right: 3rem; */
   display: flex;
   flex-direction: column;
+  align-items: center;
   /* background-color: gainsboro; */
   /* background-color: aqua; */
-  width: 45%;
+  width: 100%;
 }
 .proceso-container>h2{
   color: orange;
@@ -559,7 +589,7 @@ ul,li{
   font-weight: initial;
 }
 .requisitos-container{
-  width: 45%;
+  width: 100%;
   text-align: justify;
   padding: 2rem;
   margin-left: 3rem;
@@ -574,3 +604,302 @@ ul,li{
   margin-top: 1rem;
 }
   /* Finaliza diseño de Inscripciones */
+
+/* Estilos para el navbar */
+.nav-container >h2{
+  font-weight: 400;
+  color: white;
+}
+.nav-container > h2 > span{
+  font-weight: bold;
+}
+
+.nav-container{
+  height: 15vh;
+  position: sticky;
+  top: 0;
+  left: 0;
+  padding: .4rem;
+  background-color: rgb(0, 91,119);
+  box-shadow: 0 -1rem 5px -10px white inset;
+  border-radius: 0 0 1rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 2;
+}
+
+a{
+  color: white;
+  text-decoration: none;
+  margin-right: 1rem;
+}
+
+
+/* Comienza diseño para boton de hamburguesa */
+/* nav-icon-5 */
+.nav-icon-5{
+  width: 35px;
+  height: 30px;
+  margin: 10px 10px;
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+}
+.nav-icon-5 span{
+  background-color:#fff;
+  position: absolute;
+  border-radius: 2px;
+  transition: .3s cubic-bezier(.8, .5, .2, 1.4);
+  width:100%;
+  height: 4px;
+  transition-duration: 500ms
+}
+.nav-icon-5 span:nth-child(1){
+  top:0px;
+  left: 0px;
+}
+.nav-icon-5 span:nth-child(2){
+  top:13px;
+  left: 0px;
+  opacity:1;
+}
+.nav-icon-5 span:nth-child(3){
+  bottom:0px;
+  left: 0px;
+}
+.nav-icon-5:not(.open):hover span:nth-child(1){
+  transform: rotate(-3deg) scaleY(1.1);
+}
+.nav-icon-5:not(.open):hover span:nth-child(2){
+  transform: rotate(3deg) scaleY(1.1);
+}
+.nav-icon-5:not(.open):hover span:nth-child(3){
+  transform: rotate(-4deg) scaleY(1.1);
+}
+.nav-icon-5.open span:nth-child(1){
+  transform: rotate(45deg);
+  top: 13px;
+}
+.nav-icon-5.open span:nth-child(2){
+  opacity:0;
+}
+.nav-icon-5.open span:nth-child(3){
+  transform: rotate(-45deg);
+  top: 13px;
+}
+
+
+.links{
+  position:absolute;
+  top: -700px;
+  left: -2000px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  right: 0;
+  transition: all .5s ease;
+}
+.links>a{
+  color: white;
+  font-size: 2rem;
+  display: block;
+}
+
+.links.active{
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  top: 80%;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.links.active>a{
+  color: white;
+  font-size: 2rem;
+  margin-top: 1rem;
+}
+
+@media (min-width: 768px) { 
+  .burguer{
+    display: none;
+  }    
+
+  .links{
+    position:initial;
+    margin: 0;
+    width: fit-content;
+  }
+  
+  .links>a{
+    font-size: 1rem;
+    color: white;
+    display: inline;
+  }
+
+  .links>a{
+    font-size: 1rem;
+    color: white;
+    display: inline;
+  }
+
+  .logo-container{
+    width: 40vw;
+  }
+  .logo-titulo{
+    font-size: 1.2rem;
+    color: white;
+    margin-bottom: 1rem;
+  }
+  footer{
+    display: grid;
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .social-icon{
+    margin: 0;
+  }
+  .contact-form{
+    width: 60%; 
+  }
+  .contenido-dividido{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 85vh;
+  }
+  .slide{
+    height: 85vh;
+  }
+
+  .contenido-derecho{ 
+    width: 100%;
+    height: 85vh;
+    background-image: url("/escuela/didactico.jpg");
+    background-position: center 65%;
+  }
+  .contenido-izquierdo{
+    height: 85vh;
+  }
+  .cards-container{
+    display: grid;
+    grid-column-gap: 1rem;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .teacher-card{
+    height: fit-content;
+    grid-template-columns: 40% 1fr;
+  }
+  .teacher-details{
+    text-align: left;
+  }
+  .teacher-plus{
+    text-align: justify;
+    border-left: thick solid rgb(255,122,0);
+    height: 80%;
+    padding-left: 1rem;
+  }
+  .hero-container{
+    height: 30vh;
+  }
+  .hero-title{
+    font-size: 4rem;
+  }
+  .contenido-nosotros{
+    padding: 1rem;
+    /* background-color: violet; */
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    padding-top: 7vh;
+    margin-bottom: 10vh;
+  }
+  .sub-nosotros{
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  .contenido-nosotros>*{
+    margin-left: 2rem;
+    text-align: justify;
+  }
+
+  .contenido-nosotros{
+    padding: 1rem;
+    /* background-color: violet; */
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    padding-top: 7vh;
+    margin-bottom: 10vh;
+  }
+  .contenido-nosotros>*{
+    margin-left: 2rem;
+    text-align: justify;
+  }
+  .nosotros-descripcion{
+    padding:0 4rem;
+  }
+  .mision-vision-valores{
+    width: 100%;
+    /* height: 90vh; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+  }
+  .box-mvv{
+    width: 35vw;
+    height: fit-content;
+    background-color: white;
+    margin-left: 60px;
+    border-radius: 4rem;
+    box-shadow: 1px 2px 5px 1px rgba(0, 0, 0, 0.393); 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    text-align: justify;
+  }
+  .proceso-container{
+    margin: 1rem 0;
+    margin-right: 3rem;
+    display: flex;
+    flex-direction: column;
+    /* background-color: gainsboro; */
+    /* background-color: aqua; */
+    width: 45%;
+  }
+  .requisitos-container{
+    width: 45%;
+    text-align: justify;
+    padding: 2rem;
+    margin-left: 3rem;
+  }
+}
+
+
+/* Comienza diseño para bg-div */
+.bg-div{
+  position: absolute;
+  background-color: #222;
+  top: -700px;
+  left: -2000px;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  transition: all .6s ease;
+}
+.bg-div.active{
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  border-radius: 0 0 60% 0;
+}

@@ -6,6 +6,7 @@ import { Nosotros } from './pages/Nosotros'
 import { Inscripciones } from './pages/Inscripciones'
 import { Calendario } from './pages/Calendario'
 import { Contacto } from './pages/Contacto'
+import { NavBar } from './Components/NavBar'
 
 
 function App() {
@@ -13,7 +14,7 @@ function App() {
   return (
     <>
       <BrowserRouter>
-      <Menu/>
+      <NavBar/>
         <Routes>
           <Route path='' element={<Home/>}/>
           <Route path='/nosotros' element={<Nosotros/>}/>
