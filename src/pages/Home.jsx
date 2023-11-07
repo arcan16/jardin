@@ -51,7 +51,7 @@ export default function Home(){
                     <div className="teacher-card">
                         <img src={maestra} alt="profesora" className="img-teacher"></img>
                         <div className="teacher-details">
-                            <h4 className="card-title">Gregoria Gutierrez</h4>
+                            <h4 className="card-title">Angelica Cortez</h4>
                             <p className="card-expertise">15 años de experiencia</p>
                             <h2 className="card-puesto">Maestra de 3 año</h2>
                         </div>
