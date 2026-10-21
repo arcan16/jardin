@@ -4,10 +4,10 @@ import didactico from "/escuela/didactico.jpg"
 import { Pie } from "../Components/Pie";
 
 const personal = [
-    { nombre: "Marvin Ibarra", experiencia: "7 años de experiencia", puesto: "Dirección" },
+    { nombre: "Maria Janeth Burrola", experiencia: "7 años de experiencia", puesto: "Dirección" },
     { nombre: "Marifeli Rivera", experiencia: "34 años de experiencia", puesto: "Maestra de 1.er año" },
     { nombre: "Citlalli M. del Campo", experiencia: "9 años de experiencia", puesto: "Maestra de 2.º año" },
-    { nombre: "Angelica Cortez", experiencia: "15 años de experiencia", puesto: "Maestra de 3.er año" },
+    { nombre: "Angelica Cortes", experiencia: "15 años de experiencia", puesto: "Maestra de 3.er año" },
     { nombre: "Gabriela Arellano", experiencia: "16 años de experiencia", puesto: "Limpieza (todóloga)" },
 ];
 
