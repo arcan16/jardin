@@ -1,13 +1,17 @@
-import React from 'react'
-
 export function BurguerButton(props) {
   return (
     <>
-        <div onClick={props.handleClick} className={`icon nav-icon-5 ${props.clicked?'open':''}`}>
+        <button
+          type="button"
+          onClick={props.handleClick}
+          className={`icon nav-icon-5 ${props.clicked?'open':''}`}
+          aria-label={props.clicked ? "Cerrar menú" : "Abrir menú"}
+          aria-expanded={props.clicked}
+        >
             <span></span>
             <span></span>
             <span></span>
-        </div>
+        </button>
     </>
   )
 }

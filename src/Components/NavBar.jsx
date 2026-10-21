@@ -7,32 +7,29 @@ export function NavBar(){
     const [clicked, setClicked] = useState(false);
 
     const handleClick=()=>{
-        if(window.screen.width<768){
+        if(window.innerWidth<768){
             setClicked(!clicked);
-            console.log(clicked);
-            console.log(window.screen.width);
         }
     }
+    const linkClass=({isActive})=>(isActive?"active-link":null);
     return(
         <>
-            <nav className='nav-container'>
-                {/* <h2>NavBar <span>Responsive</span></h2> */}
-                <div className="logo-container">
-                <img src={mylogo} className="logo-principal"></img>
-                <h2 className="logo-titulo">Jardin de niños Anahuac</h2>
-                </div >
+            <nav className='nav-container' aria-label="Principal">
+                <NavLink to="/" className="logo-container">
+                    <img src={mylogo} className="logo-principal" alt=""></img>
+                    <span className="logo-titulo">Jardín de Niños <strong>Anáhuac</strong></span>
+                </NavLink>
                 <div className={`links ${clicked ? 'active':''}`}>
-                {/* <div className={`links active`}> */}
-                    <NavLink onClick={handleClick} to="/" className={({isActive})=>(isActive?"active-link":null)}>Home</NavLink>
-                    <NavLink onClick={handleClick} to="/nosotros" className={({isActive})=>(isActive?"active-link":null)}>Quienes somos?</NavLink>
-                    <NavLink onClick={handleClick} to="/inscripciones" className={({isActive})=>(isActive?"active-link":null)}>Inscripciones</NavLink>
-                    <NavLink onClick={handleClick} to="/calendario" className={({isActive})=>(isActive?"active-link":null)}>Calendario</NavLink>
-                    <NavLink onClick={handleClick} to="/contacto" className={({isActive})=>(isActive?"active-link":null)}>Contacto</NavLink>
+                    <NavLink onClick={handleClick} to="/" end className={linkClass}>Inicio</NavLink>
+                    <NavLink onClick={handleClick} to="/nosotros" className={linkClass}>¿Quiénes somos?</NavLink>
+                    <NavLink onClick={handleClick} to="/inscripciones" className={linkClass}>Inscripciones</NavLink>
+                    <NavLink onClick={handleClick} to="/calendario" className={linkClass}>Calendario</NavLink>
+                    <NavLink onClick={handleClick} to="/contacto" className={({isActive})=>`nav-cta ${isActive?"active-link":""}`}>Contacto</NavLink>
                 </div>
                 <div className='burguer'>
                     <BurguerButton clicked={clicked} handleClick={handleClick}/>
                 </div>
-                <div className={`bg-div initial ${clicked ?'active':''}`}></div>
+                <div className={`bg-div ${clicked ?'active':''}`} onClick={handleClick}></div>
             </nav>
         </>
     );
